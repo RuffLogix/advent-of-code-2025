@@ -8,5 +8,5 @@ import (
 func main() {
 	d1 := day1.Day1{}
 
-	fmt.Println(d1.Solve())
+	fmt.Println(d1.SolveSecondHalf())
 }
