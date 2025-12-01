@@ -10,13 +10,17 @@ import (
 type Day1 struct {
 }
 
-func (d Day1) SolveFirstHalf() int {
+func (d Day1) readActions() []string {
 	content, err := os.ReadFile("day1/input.txt")
 	if err != nil {
 		log.Fatalf("Error reading file: %v", err)
 	}
 
-	actions := strings.Split(string(content), "\n")
+	return strings.Split(string(content), "\n")
+}
+
+func (d Day1) SolveFirstHalf() int {
+	actions := d.readActions()
 
 	currentPosition := 50
 	countZero := 0
@@ -48,12 +52,7 @@ func (d Day1) SolveFirstHalf() int {
 }
 
 func (d Day1) SolveSecondHalf() int {
-	content, err := os.ReadFile("day1/input.txt")
-	if err != nil {
-		log.Fatalf("Error reading file: %v", err)
-	}
-
-	actions := strings.Split(string(content), "\n")
+	actions := d.readActions()
 
 	currentPosition := 50
 	countZero := 0
