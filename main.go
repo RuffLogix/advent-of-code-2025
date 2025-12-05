@@ -1,12 +1,12 @@
 package main
 
 import (
-	day3 "advent-of-code-2025/day3"
+	day4 "advent-of-code-2025/day4"
 	"fmt"
 )
 
 func main() {
-	d3 := day3.Day3{}
+	d4 := day4.Day4{}
 
-	fmt.Println(d3.SolveSecondHalf())
+	fmt.Println(d4.SolveSecondHalf())
 }
